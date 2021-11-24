@@ -4,10 +4,13 @@ from pyrogram.types import InlineKeyboardButton
 class Data:
     # Start Message
     START = """
-Hey {}
+مرحبا {}
 
-Welcome to {}
+مرحب بك في {}
 
+يستطيع هذا البوت مساعدتك في بعض خدمات ملفات pdf
+مثل تحويل الصور الى ملف pdf
+استخدم الامر /help لرؤية المزيد من الخدمات
 I can help you to do stuff on PDFs as well as convert images to PDF. Use /help to see features.
 
 JUST SEND A PDF (or an image) to get started.
