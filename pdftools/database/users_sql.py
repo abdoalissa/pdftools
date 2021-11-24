@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer
-from PDFBot.database import BASE, SESSION
+from pdftools.database import BASE, SESSION
 
 
 class Users(BASE):
