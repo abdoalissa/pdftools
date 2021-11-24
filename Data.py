@@ -11,52 +11,46 @@ class Data:
 يستطيع هذا البوت مساعدتك في بعض خدمات ملفات pdf
 مثل تحويل الصور الى ملف pdf
 استخدم الامر /help لرؤية المزيد من الخدمات
-I can help you to do stuff on PDFs as well as convert images to PDF. Use /help to see features.
 
-JUST SEND A PDF (or an image) to get started.
+فقط ارسل ملف pdf او صورة لبدء العمل
 
 By @abdoalissa
     """
 
     # Home Button
     home_buttons = [
-        [InlineKeyboardButton(text="🏠 Return Home 🏠", callback_data="home")]
+        [InlineKeyboardButton(text="🏠 الصفحة الرئيسية 🏠", callback_data="home")]
     ]
 
     # Rest Buttons
     buttons = [
-        [InlineKeyboardButton("✨ Bot Status and More Bots ✨", url="https://t.me/abdoalissa")],
+        [InlineKeyboardButton("✨ لمزيد من البوتات ✨", url="https://t.me/abdoalissa")],
         [
-            InlineKeyboardButton("How to Use ❔", callback_data="help"),
-            InlineKeyboardButton("🎪 About 🎪", callback_data="about")
+            InlineKeyboardButton("كيفية الاستخدام ❔", callback_data="help"),
+            InlineKeyboardButton("🎪 حول 🎪", callback_data="about")
         ],
-        [InlineKeyboardButton("♥ contact with Developer ♥", url="https://t.me/abdoalissa")],
+        [InlineKeyboardButton("♥ التواصل مع المطور ♥", url="https://t.me/abdoalissa")],
     ]
 
     # Help Message
     HELP = """
-**Usage**
+**الاستخدام**
 
-1) Just send a PDF to do stuff on it
-2) Send images to convert to PDFs
+1) فقط ارسل ملف pdf  لبدء العمل
+2) او ارسل صورة لتحويلها لملف pdf
 
-**Functions**
-1) Rotate PDF Pages
-2) Merge PDFs
-3) Encrypt PDFs
-4) Decrypt PDFs
-5) Convert Images to PDF
+**الوظائف**
+1) تدوير صفحات pdf
+2) دمج ملفات pdf
+3) تشفير ملف pdf
+4) فك تشفير ملف pdf
+5) تحويل الصور لملفات pdf
 """
 
     # About Message
     ABOUT = """
-**About This Bot** 
-
-A telegram bot with PDF Tools by @StarkBots
-
-Source Code : contact with me :)
-
-Framework : [Pyrogram](docs.pyrogram.org)
+**حول هذا البوت** 
+Source Code : يرجى التواصل معي :)
 
 Language : [Python](www.python.org)
 
