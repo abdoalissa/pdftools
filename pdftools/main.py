@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-from PDFBot.core import extract_info
+from pdftools.core import extract_info
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from PyPDF2.pdf import PdfFileReader
 import warnings
