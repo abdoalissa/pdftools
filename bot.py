@@ -30,6 +30,7 @@ if __name__ == "__main__":
         raise Exception("Your BOT_TOKEN is not valid.")
     uname = app.get_me().username
     print(f"@{uname} Started Successfully!")
+    run(host='0.0.0.0', port=os.environ.get('PORT', '5000'))
     idle()
     app.stop()
     print("Bot stopped. Alvida!")
