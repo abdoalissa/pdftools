@@ -17,7 +17,7 @@ async def img2pdf(bot: Client, msg: Message):
     directory = f"downloads/{msg.from_user.id}_images/"
     output = f"{directory}{user_id}_images.pdf"
     await msg.download(file_name=directory)
-    image_msg = await bot.ask(user_id, "Please send more images or press /create to create a PDF file for this image. \n\nTo cancel this, use /cancel.", reply_to_message_id=msg.message_id)
+    image_msg = await bot.ask(user_id, "الرجاء ارسال المزيد من الصور او اضغط على /create لتوليد ملف pdf. \n\nلالغاء العملية اضغط  /cancel.", reply_to_message_id=msg.message_id)
     while True:
         if await cancelled(image_msg):
             break
@@ -25,14 +25,14 @@ async def img2pdf(bot: Client, msg: Message):
             image_converting[user_id] = False
             paths = [directory + file for file in os.listdir(directory)]
             await images_to_pdf(paths, output)
-            await msg.reply_document(output, caption=f"Converted {len(paths)} images to PDF \n\nBy @StarkBots")
+            await msg.reply_document(output, caption=f"Converted {len(paths)} images to PDF \n\nBy @abdoalissa")
             break
         elif not image_msg.photo:
-            image_msg = await bot.ask(user_id, "This is not an image. Please send an image or /cancel.", reply_to_message_id=image_msg.message_id)
+            image_msg = await bot.ask(user_id, "هذا الملف ليس صورة الرجاء ارسال صورة او اضغط /cancel.", reply_to_message_id=image_msg.message_id)
             continue
         else:
             await image_msg.download(file_name=directory)
             total_images = len(os.listdir(directory))
-            image_msg = await bot.ask(user_id, f"Please send more images or press /create. To cancel this, use /cancel. \n\nTotal Images till now : {total_images}", reply_to_message_id=image_msg.message_id)
+            image_msg = await bot.ask(user_id, f"الرجاء ارسال المزيد من الصور او اضغط /create. لالغاء العملية استخدم /cancel. \n\nمجموع الصور حتى الان : {total_images}", reply_to_message_id=image_msg.message_id)
     image_converting[user_id] = False
     shutil.rmtree(directory)
