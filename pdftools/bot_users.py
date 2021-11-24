@@ -1,5 +1,5 @@
-from PDFBot.database.users_sql import Users, num_users
-from PDFBot.database import SESSION
+from pdftools.database.users_sql import Users, num_users
+from pdftools.database import SESSION
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
