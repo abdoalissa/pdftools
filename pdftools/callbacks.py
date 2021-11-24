@@ -5,7 +5,7 @@ from Data import Data
 import warnings
 from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery, InlineKeyboardMarkup
-from PDFBot.core import (
+from pdftools.core import (
     encrypt_pdf,
     decrypt_pdf,
     rotate_pdf,
