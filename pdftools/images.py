@@ -1,9 +1,9 @@
 import os
 import shutil
 from pyrogram import Client, filters
-from PDFBot.core import images_to_pdf
+from pdftools.core import images_to_pdf
 from pyrogram.types import Message
-from PDFBot.callbacks import cancelled
+from pdftools.callbacks import cancelled
 
 image_converting = {}
 
