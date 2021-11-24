@@ -31,3 +31,5 @@ if __name__ == "__main__":
     uname = app.get_me().username
     print(f"@{uname} Started Successfully!")
     idle()
+    app.stop()
+    print("Bot stopped. Alvida!")
