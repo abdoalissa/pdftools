@@ -59,7 +59,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             )
         elif query == "rotate":
             await callback_query.answer()
-            pages_text = "Please tell me which pages to rotate. \n\n**ALL PAGES** \nTo rotate all pages, send 'all' \n\n**SPECIFIC PAGES** \nTo rotate specific pages, separate them by space. \nExample: '1 4 10' or '34 78 93 100'"
+            pages_text = "الرجاء اخبرني ما هي الصفحات التي تريد تدويرها \n\n**كل الصور** \nلتدوير كل الصور ارسل  'all' \n\n**صفحات مخصصة** \nلتدوير صفحات مخصصة يرجى ارسال ارقامها مع مسافة . \nمثال: '1 4 10' or '34 78 93 100'"
             direction_text = "Please tell me how to rotate the pages. \n\n**RIGHT** \nTo rotate the pages to right direction (90 degrees Clockwise), send 'right' \n\n**LEFT** \nTo rotate the pages to left direction (90 degrees Anticlockwise), send 'left' \n\n**UPSIDE** \nTo rotate the pages to upside down (180 degrees), send 'upside'"
             pages = await bot.ask(user_id, pages_text)
             while True:
