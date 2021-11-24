@@ -13,7 +13,7 @@ from pdftools.core import (
     extract_text,
     split_pdf
 )
-from PDFBot.main import merging
+from pdftools.main import merging
 
 
 # Callbacks
