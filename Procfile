@@ -1,1 +1,1 @@
-web: python3 bot.py run(host='0.0.0.0', port=os.environ.get('PORT', '5000'))
+web: python3 bot.py
